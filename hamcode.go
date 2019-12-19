@@ -136,7 +136,7 @@ func correct(bin string) (string, int) {
 
 // Returns the data code inside an Hamming code.
 // This function first corrects the code using correct function.
-func decode(bin string) (code string) {
+func Decode(bin string) (code string) {
 	bin, _ = correct(bin)
 
 	for pos, _ := range bin {
@@ -149,7 +149,7 @@ func decode(bin string) (code string) {
 }
 
 // Returns encoded data code as an Hamming code
-func encode(data string) (hcode string) {
+func Encode(data string) (hcode string) {
 	bits := make([]int, 0)
 
 	for pos, i := 0, 0; i < len(data); pos++ {
